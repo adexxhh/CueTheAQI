@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AQI Disease Prediction</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #6E7C7C, #E3F2FD);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            background-color: white;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 16px;
+            margin-bottom: 8px;
+            display: block;
+            color: #555;
+        }
+
+        input[type="number"] {
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+            max-width: 300px;
+            font-size: 16px;
+            margin-bottom: 20px;
+            transition: border-color 0.3s;
+        }
+
+        input[type="number"]:focus {
+            border-color: #4CAF50;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .prediction-results {
+            border: 2px solid #eee;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .error {
+            color: #D8000C;
+            background-color: #FFBABA;
+            padding: 10px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .results p {
+            font-size: 18px;
+            color: #444;
+            margin: 10px 0;
+        }
+
+        .results strong {
+            color: #333;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 28px;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+            input[type="number"], button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>AQI Disease Prediction</h1>
+
+        <form method="POST">
+            <label for="aqi">Enter AQI Value:</label>
+            <input type="number" id="aqi" name="aqi" required>
+            <button type="submit">Predict</button>
+        </form>
+
+        {% if prediction %}
+        <div class="prediction-results">
+            {% if prediction.Error %}
+            <p class="error">{{ prediction.Error }}</p>
+            {% else %}
+            <div class="results">
+                <h2>Prediction Results:</h2>
+                <p><strong>Disease:</strong> {{ prediction.Disease }}</p>
+                <p><strong>Possible Risks (Effects):</strong> {{ prediction.Effects }}</p>
+                <p><strong>Most Vulnerable Age Groups:</strong> {{ prediction.Vulnerable_Groups }}</p>
+                <p><strong>Preventive Measures:</strong> {{ prediction.Preventive_Measures }}</p>
+            </div>
+            {% endif %}
+        </div>
+        {% endif %}
+    </div>
+
+</body>
+</html>
