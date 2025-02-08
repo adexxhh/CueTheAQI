@@ -1,0 +1,13 @@
+Disease,Critical AQI Levels,Effects,Most Vulnerable Age Groups,Preventive Measures
+Asthma, aqi >= 100 (Moderate to Hazardous),"Wheezing, breathlessness, coughing, chest tightness","Children, elderly, respiratory patients","Avoid outdoor activities in high AQI, use air purifiers, wear N95 masks"
+COPD,aqi>= 150 (Unhealthy to Hazardous),"Shortness of breath, chronic cough, mucus buildup","Elderly, smokers, industrial workers","Reduce outdoor exposure, quit smoking, use bronchodilators"
+Lung Cancer,aqi>= 200 (Very Unhealthy to Hazardous),"DNA damage leading to cancer, persistent cough, chest pain","Adults (especially smokers), urban dwellers","Minimize pollutant exposure, avoid smoking, indoor air filtration"
+Pneumonia,aqi>= 200 (Very Unhealthy to Hazardous),"Lung infections, fever, difficulty breathing, chest pain","Infants, elderly, immunocompromised individuals","Get vaccinated, practice good hygiene, improve indoor ventilation"
+Bronchitis,aqi >= 100 (Moderate to Hazardous),"Persistent cough with mucus, sore throat, wheezing","Smokers, people exposed to industrial pollution","Wear masks in polluted areas, avoid smoking, humidify indoor air"
+Emphysema,aqi>= 150 (Unhealthy to Hazardous),"Lung tissue damage, shortness of breath, chronic fatigue","Smokers, factory workers, polluted area residents","Avoid smoking, use oxygen therapy, exercise indoors"
+Pulmonary Fibrosis,aqi>= 200 (Very Unhealthy to Hazardous),"Stiff lungs, breathlessness, persistent dry cough","Industrial workers, miners, long-term polluted area residents","Avoid toxic air pollutants, wear protective masks, monitor lung health"
+Respiratory Allergies,aqi>= 100 (Moderate to Hazardous),"Sneezing, runny nose, itchy eyes, nasal congestion","Children, weakened immune system individuals","Keep windows closed, use HEPA filters, avoid outdoor exercise"
+Silicosis,aqi>= 150 (Unhealthy to Hazardous),"Lung scarring, shortness of breath, chest pain","Industrial workers, miners, construction workers","Use respirators in high-dust environments, follow workplace safety"
+Occupational Lung Diseases,aqi>= 150 (Unhealthy to Hazardous),"Chronic cough, lung damage, shortness of breath","Miners, construction workers, textile workers","Workplace safety measures, periodic health checkups, protective gear"
+Hypoxia (CO Exposure),aqi >=150 (Unhealthy to Hazardous),"Headache, dizziness, confusion, unconsciousness","Urban residents, people exposed to indoor smoke","Ensure ventilation, avoid indoor smoking, use CO detectors"
+Tuberculosis,aqi>= 200 (Very Unhealthy to Hazardous),"Chronic cough, night sweats, weight loss, severe lung infection","Malnourished individuals, polluted and overcrowded area residents","Strengthen immunity, maintain hygiene, improve air quality"
